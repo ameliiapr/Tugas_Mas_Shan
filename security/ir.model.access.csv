@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_helpdesk_ticket,Access Helpdesk Ticket,model_helpdesk_ticket,base.group_user,1,1,1,1
+access_helpdesk_ticket_line,Access Helpdesk Ticket Line,model_helpdesk_ticket_line,,1,1,1,1
+access_dashboard_pesawat,Access Dashboard Pesawat,model_dashboard_pesawat,,1,1,1,1

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report id="report_ticket_detail"
+        string="Ticket Detail"
+        model="helpdesk.ticket"
+        report_type="qweb-pdf"
+        name="helpdesk_ticket.ticket_detail"
+        file="helpdesk_ticket.ticket_detail"/>
+</odoo>
+

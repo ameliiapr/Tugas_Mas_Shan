@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="ticket_detail">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                            <!-- <div class="col-12 text-left-align">
+                                <table> -->
+                                    <!-- <img alt="img" t-if="doc.asset_img" t-att-src="image_data_uri(doc.asset_img)" style="max-height:150px;"/> -->
+                                    <!-- <div class>
+                                        <h2 t-field name="doc.name" style="color: black;"/>
+                                        <h2 t-field divisi="doc.divisi" style="color: black"/>
+                                        <h2 t-field departemen="doc.departemen" style="color: black"/>
+                                        <h2 t-field tanggal="doc.tanggal" style="color: black"/>
+                                </table>
+                            </div> -->
+                        <div class="row">
+                            <div class="col-4 text-left">
+                                <strong>Name: </strong>
+                                <span t-field="doc.name"/>
+                            </div>
+                            <div class="col-4 text-left">
+                                <strong>Divisi: </strong>
+                                <span t-field="doc.divisi"/>
+                            </div>
+                            <div class="col-4 text-left">
+                                <strong>Departemen: </strong>
+                                <span t-field="doc.departemen"/>
+                            </div>
+                            <div class="col-4 text-left">
+                                <strong>Tanggal: </strong>
+                                <span t-field="doc.tanggal"/>
+                            </div>
+                        </div>
+                        <t t-if="doc.helpdesk_ticket_ids">
+                            <span>Problems</span>
+                            <table class="table table-sm o_main_table" name="problems">
+                                <thead>
+                                    <tr>
+                                        <th name="th_device_id" class="text-start">
+                                            <span>Device Id</span>
+                                        </th>
+                                        <th name="th_problem_category"  class="text-start">
+                                            <span>Problem Category</span>
+                                        </th>
+                                        <th name="th_utility" class="text-start">
+                                            <span>Utility</span>
+                                        </th>
+                                         <th name="th_note" class="text-start">
+                                            <span>Note</span>
+                                        </th>
+                                         <th name="th_documents" class="text-start">
+                                            <span>Document</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <t t-foreach="doc.helpdesk_ticket_ids" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.device_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.problem_category"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.utility"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.note"/>
+                                        </td>
+                                          <td>
+                                            <span t-field="line.documents"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                             </table>
+                         </t>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
